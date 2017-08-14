@@ -1,8 +1,8 @@
 
- var button=document.getElementById('counter');
+ var button1=document.getElementById('counter');
 var counter=1;
   alert(counter);
-button.onClick=function(){
+button1.onClick=function(){
   
     counter=counter+1;
     var span=document.getElementById('count');
