@@ -12,6 +12,9 @@ var request=new XMLHttpRequest();
     var span=document.getElementById('count');
     
     span.innerHTML=counter.toString();
+        }
+        
+    };
 };
 
 var submit=document.getElementById('submit_btn');
