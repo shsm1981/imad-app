@@ -20,7 +20,6 @@ submit.onclick=function(){
             
         if(request.status===200){
             var names=request.responseText;
-            alert(names);
             names=JSON.parse(names);
             
   
