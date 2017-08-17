@@ -17,10 +17,10 @@ submit.onclick=function(){
     var request=new XMLHttpRequest();
     request.onreadystatechange=function(){
         if(request.readyState===XMLHttpRequest.DONE){
-            alert("hello");
+            
         if(request.status===200){
             var names=request.responseText;
-            alert(names);
+            alert("hello");
             names=JSON.parse(names);
   
     var list='';
