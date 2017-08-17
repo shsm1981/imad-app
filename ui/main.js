@@ -13,6 +13,7 @@ button.onclick=function(){
 
 var submit=document.getElementById('submit_btn');
 submit.onclick=function(){
+      alert("hello");
     var request=new XMLHttpRequest();
     request.onreadystatechange=function(){
         if(request.readyState===XMLHttpRequest.DONE){
@@ -25,7 +26,7 @@ submit.onclick=function(){
     {list+='<li>'+names[i]+'</li>';
     }
     var ul=document.getElementById('namelist');
-    alert("hello");
+  
     ul.innerHTML=list;
         }
         }
