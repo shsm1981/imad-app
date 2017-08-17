@@ -13,12 +13,13 @@ button.onclick=function(){
 
 var submit=document.getElementById('submit_btn');
 submit.onclick=function(){
-      alert("hello");
+    
     var request=new XMLHttpRequest();
     request.onreadystatechange=function(){
         if(request.readyState===XMLHttpRequest.DONE){
         if(request.status===200){
             var names=request.responseText;
+            alert(names);
             names=JSON.parse(names);
   
     var list='';
