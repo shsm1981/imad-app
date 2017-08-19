@@ -66,7 +66,9 @@ function createTemplate(data){
     var content=data.content;
     var category=data.category;
 
-    var htmlTemplate=' <html><head><title>${title}</title><link href="/ui/style.css" rel="stylesheet" /></head> <body> <h1>${category}</h1><p>${content}</p>    <h3>${date.toDateString()}</h3>    </body></html>   ';
+    var htmlTemplate=' 
+    <html><head><title>${title}</title><link href="/ui/style.css" rel="stylesheet" /></head> <body> <h1>${category}</h1><p>${content}</p>    <h3>${date.toDateString()}</h3>    </body></html>  
+    ';
     return htmlTemplate;
    
 }
