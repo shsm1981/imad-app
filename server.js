@@ -50,8 +50,8 @@ app.get('/articles/:articleName',function(req,res){
       if(result.rows.length===0)
       {res.status(404).send('article not found');}
       else
-      {res.send(counter.toString());
-         // var articleData=reres.send(counter.toString());sult.rows[0];
+      {res.send(JSON.stringify(result.rows));
+         // var articleData=result.rows[0];
          // res.send(createTemplate(articleData));
       }
       }
