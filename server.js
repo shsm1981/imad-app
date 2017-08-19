@@ -65,7 +65,7 @@ function createTemplate(data){
     var date=data.date;
     var content=data.content;
     var category=data.category;
-    var htmlTemplate='
+    var htmlTemplate=`
     <html>
     <head>
     <title>
@@ -84,7 +84,7 @@ function createTemplate(data){
   </h3>
   </body>
 </html> 
-';
+`;
     return htmlTemplate;
    
 }
