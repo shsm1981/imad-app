@@ -59,6 +59,24 @@ app.get('/articles/:articleName',function(req,res){
     
 });
 
+function createTemplate(data){
+    title:data.title;
+    date:data.date;
+    content:data.content;
+    heading:data.heading;
+    var htmlTemplate='
+    <html>
+    <head><title>${title}</title>
+    <link href="/ui/style.css" rel="stylesheet"/></head>
+    <body>
+    <h1>${heading}</h1>
+    <p>${content}</p>
+    <h3>${date}</h3>
+    </body></html>
+    
+    ';
+}
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
