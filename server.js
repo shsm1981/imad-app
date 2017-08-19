@@ -13,12 +13,19 @@ var config={
 var app = express();
 app.use(morgan('combined'));
 
+var pool=new Pool(config);
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article', function (req, res) {
-  //res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+app.get('/article-db', function (req, res) {
+  pool.query('select * from article', function(err,result){
+      if(err){
+          res.status(500).send(err.toString());
+      }
+      else
+      {res.send(JSON.stringify(result));}
+  });
 });
 var counter=0;
 app.get('/counter',function(req,res){
