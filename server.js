@@ -68,7 +68,7 @@ function createTemplate(data){
 
     var htmlTemplate=' <html><head><title>${title}</title><link href="/ui/style.css" rel="stylesheet" /></head> <body> <h1>${category}</h1><p>${content}</p>    <h3>${date.toDateString()}</h3>    </body></html>   ';
     //return htmlTemplate;
-    return title;
+    return date;
 }
 
 app.get('/ui/style.css', function (req, res) {
