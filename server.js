@@ -2,6 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool=require('pg').Pool;
+var crypto=require('crypto');
 var config={
     user:'shsm1981',
     database:'shsm1981',
@@ -12,6 +13,8 @@ var config={
 
 var app = express();
 app.use(morgan('combined'));
+
+
 
 var pool=new Pool(config);
 app.get('/', function (req, res) {
